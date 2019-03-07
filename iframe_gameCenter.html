@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="Pt">
+        <style>
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            a {
+                text-decoration: none;
+                display: block;
+            }
+            .lt {
+                float: left;
+            }
+            .rt {
+                float: right;
+            }
+            body {
+                height: 256px;
+            }
+            #gameCenter {
+                width: 466px;
+                height: 100%;
+                background: #ffffff;
+                border-radius: 4px;
+            }
+            #gameCenter .game_box {
+                position: relative;
+                margin: 10px 0 0 10px;
+                width: 232px;
+
+                border-radius: 4px;
+
+            }
+            #gameCenter .game_box .game_top {
+                position: absolute;
+                top: 0;left: 0;
+                width: 100%;
+                height: 128px;
+                border-radius: 10px;
+            }
+            #gameCenter .game_box .game_top a{
+                width: 100%;
+                height: 100%;
+            }
+            #gameCenter .game_box .game_top a img {
+                border-radius: 6px;
+            }
+            #gameCenter .game_box .game_bottom {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                margin-top: 142px;
+                width: 100%;
+            }
+
+            /*原本用来清除浮动 但后面使用了 flex布局就不需要了
+            #gameCenter .game_box .game_bottom:after {*/
+                /*content: '';*/
+                /*display: block;*/
+                /*height: 0;*/
+                /*overflow: hidden;*/
+                /*clear: both;*/
+            /*}*/
+            #gameCenter .game_box .game_bottom .game:hover {
+                background: #e9e9e9;
+            }
+            #gameCenter .game_box .game_bottom .game a {
+
+            }
+
+            #gameCenter .game_box .game_bottom .game a img {
+                border-radius: 6px;
+                width: 64px;
+                height:64px;
+            }
+            #gameCenter .game_box .game_bottom .game a p {
+                width: 64px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gameCenter">
+            <div class="game_box lt">
+                <div class="game_top">
+                    <a href="" ><img src="img/user/1.jpg" alt="" width="100%" height="100%"></a>
+                </div>
+                <div class="game_bottom">
+                    <div class="game"><a href="" ><img src="img/user/1.jpg"  alt="">
+                        <p>时之歌</p>
+                    </a></div>
+                    <div class="game"><a href=""><img src="img/user/1.jpg"  alt="">
+                        <p>碧蓝航线</p>
+                    </a></div>
+                    <div class="game"><a href=""><img src="img/user/1.jpg"  alt="">
+                        <p>方舟指令</p>
+                    </a></div>
+                </div>
+            </div>
+            <div class="game_list rt">
+
+            </div>
+        </div>
+        
+        <script>
+            
+        </script>
+    </body>
+</html>
