@@ -48,7 +48,7 @@
                 padding: 0 8px;
                 height: 100%;
             }
-            #content #nav_top .nav .nav_link a{
+            #content #nav_top .nav .nav_link a.linkTo{
                 display: block;
                 height: 40px;
             }
@@ -65,23 +65,6 @@
             }
             #content #nav_top #nav_lt .nav_link.hasIcon a {
                 margin-left: 20px;
-            }
-            #content #nav_top #nav_rt {
-                display: inline;
-                margin-right: 180px;
-            }
-            #content #nav_top #nav_rt #user {
-                position: relative;
-                width: 40px;
-                height: 100%;
-            }
-            #content #nav_top #nav_rt #user .portrait {
-                position: absolute;
-                top: 50%;left: 50%;
-                transform: translateY(-50%) translateX(-50%);
-                width: 32px;
-                height:32px;
-                border-radius: 50%;
             }
 
             /*游戏中心*/
@@ -101,28 +84,165 @@
             /*#content #nav_top #nav_lt .nav_link.game .slide-fade-enter {*/
                 /*animation: fadeIn 3s;*/
             /*}*/
+            #content #nav_top #nav_rt {
+                display: inline;
+                margin-right: 180px;
+            }
+            #content #nav_top #nav_rt #user {
+                position: relative;
+                width: 40px;
+                height: 100%;
+                line-height: 1;
+            }
+            #content #nav_top #nav_rt #user .portrait {
+                position: absolute;
+                top: 50%;left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                width: 32px;
+                height:32px;
+                border-radius: 50%;
+                border: 2px solid #FFF;
+                z-index: 99;
+            }
+            #content #nav_top #nav_rt #user .user_information {
+                position: absolute;
+                display: none;
+                width: 262px;
+                height: 322px;
+                top: 100%;left: 50%;
+                transform: translateX(-50%);
+                background: #fefffd;
+            }
+            #content #nav_top #nav_rt #user .user_information .user_name {
+                margin-top: 50px;
+                width: 100%;
+                line-height: 100%;
+            }
+            #content #nav_top #nav_rt #user .user_information .user_name b {
+                display: block;
+                color: rgb(251,114,153);
+            }
+            #content #nav_top #nav_rt #user .user_information .user_name .vip_type{
+                margin-top: 10px;
+            }
+            #content #nav_top #nav_rt #user .user_information .user_name .vip_type a span{
+                padding: 2px;
+                background: rgb(251,114,153);
+                border-radius: 2px;
+                color: #ffffff;
+            }
+            #content #nav_top #nav_rt #user .user_information .profile {
+                margin-top: 16px;
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                background: white;
+            }
+            #content #nav_top #nav_rt #user .user_information .profile a {
+                height: 100%;
+                cursor: pointer;
+            }
+            #content #nav_top #nav_rt #user .user_information .profile .user_icon{
+                display: inline-block;
+                margin-left: 20px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                color: white;
+            }
+            #content #nav_top #nav_rt #user .user_information .profile .coin .user_icon{
+                background: #6e83ef;
+            }
+            #content #nav_top #nav_rt #user .user_information .profile .b_coin .user_icon {
+                background: #f9e234;
+            }
+            #content #nav_top #nav_rt #user .user_information .profile .email .user_icon {
+                margin: 0 10px 0 5px;
+            }
+            #content #nav_top #nav_rt #user .user_information .grade {
+                margin-top: 10px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+            }
+            #content #nav_top #nav_rt #user .user_information .grade .lv_span{
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+            #content #nav_top #nav_rt #user .user_information .grade .lv4 {
+                font-size: 16px;
+                width: 20px;
+                height: 20px;
+                background: rgb(243,203,133);
+                color: #fff;
+                border-radius: 50%;
+            }
+            #content #nav_top #nav_rt #user .user_information .grade .bar {
+                position: relative;
+                width: 180px;
+                height: 10px;
+                background: white;
+                margin-top: 5px;
+            }
+            #content #nav_top #nav_rt #user .user_information .grade .bar .rate {
+                position: absolute;
+                top: 0;left: 0;
+                background: rgb(243,203,133);
+                width: 75%;
+                height: 100%;
+            }
+            #content #nav_top #nav_rt #user .user_information .grade .num{
+                width: 150px;
+                height: 20px;
+
+            }
         </style>
     </head>
     <body>
         <div id="content">
             <nav id="nav_top">
+                <!--左侧的导航-->
                 <div class="nav lt" id="nav_lt">
-                    <div class="nav_link lt mainSite hasIcon"><img class="icon main" src="img/icon/wf_B站.svg" ></img><a href="">主站</a></div>
-                    <div class="nav_link lt"><a href="">画友</a></div>
-                    <div class="nav_link lt"><a href="">音频</a></div>
+                    <div class="nav_link lt mainSite hasIcon"><img class="icon main" src="img/icon/wf_B站.svg" ><a href="" class="linkTo">主站</a></div>
+                    <div class="nav_link lt"><a href="" class="linkTo">画友</a></div>
+                    <div class="nav_link lt"><a href="" class="linkTo">音频</a></div>
                     <div class="nav_link lt game">
-                        <a href="">游戏中心</a>
+                        <a href="" class="linkTo">游戏中心</a>
                         <div class="i-frame" style="width:680px;height: 260px;display: none">
                             <iframe src="iframe_gameCenter.html" frameborder="0" width="100%" height="100%"></iframe>
                         </div>
                     </div>
-                    <div class="nav_link lt"><a href="">直播</a></div>
-                    <div class="nav_link lt"><a href="">会员购</a></div>
-                    <div class="nav_link lt hasIcon"><img src="img/icon/手机.svg" class="icon tel" alt=""><a href="">下载app</a></div>
+                    <div class="nav_link lt"><a href="" class="linkTo">直播</a></div>
+                    <div class="nav_link lt"><a href="" class="linkTo">会员购</a></div>
+                    <div class="nav_link lt hasIcon"><img src="img/icon/手机.svg" class="icon tel" alt=""><a href="" class="linkTo">下载app</a></div>
                 </div>
+                <!--右侧的导航-->
                 <div class="nav rt" id="nav_rt">
                     <div class="lt nav_link" id="user">
-                        <a href=""><img class="portrait" src="img/user/1.jpg"></img></a>
+                        <a href=""><img class="portrait" src="img/user/1.jpg"></a>
+                        <div class="user_information">
+                            <div class="user_name">
+                                <b>@user_id</b>
+                                <p class="vip_type">
+                                    <a href=""><span>@vip_type</span></a>
+                                </p>
+                            </div>
+                            <div class="profile">
+                                <a class="coin lt"><span class="user_icon">币</span><span>729</span></a>
+                                <a class="b_coin lt"><span class="user_icon">B</span><span>55</span></a>
+                                <a class="email rt"><img src="img/icon/tel2.svg" class="user_icon"></a>
+                                <a class="tel rt"><img src="img/icon/邮件.svg" class="user_icon"></a>
+                            </div>
+                            <div class="grade">
+                                <span class="lv_span lt">等级</span>
+                                <div class="lv lv4 lt">4</div>
+                                <div class="bar lt">
+                                    <div class="rate"></div>
+                                </div>
+                                <p class="num rt">8000/10800</p>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="lt nav_link"><a href="" class="user_imfo">大会员</a></div>
                     <div class="lt nav_link"><a href="" class="user_imfo">消息</a></div>
@@ -162,7 +282,28 @@
             // game_center.mouseleave(function () {
             //     iframe.addClass('slide-fade-leave')
             // })
-
+            //给用户头像添加动画
+            $user= $('#user');
+            $portrait= $('.portrait');
+            $userBox= $('.user_information');
+            $user.hover(function () {
+                $portrait.animate({width: `68px`,height: `68px`,marginTop: `50%`})
+                clearTimeout(timeOut);
+                time= setTimeout(function () {
+                    $userBox.css({
+                        display: 'block',
+                        opacity: 0,
+                        top: '46px'
+                    }).animate({top:`40px`, opacity: 1},50);
+                },500);
+            },function () {
+                $portrait.animate({width: `34px`,height: `34px`,marginTop: 0})
+                clearTimeout(timeIn);
+                $userBox.animate({top: `46px`,opacity: 0},400);
+                timeOut= setTimeout(function () {
+                    $userBox.css({display: 'none'})
+                },200)
+            })
         </script>
     </body>
 </html>
